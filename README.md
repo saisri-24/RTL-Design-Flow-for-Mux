@@ -5,9 +5,8 @@
 - Observed the **waveforms** using **GTKWave** after simulation.
 - Commands used:
   ```bash
-  yosys> read_verilog mux.v
-  yosys> synth -top mux
-  yosys> write_verilog mux_netlist.v
-  iverilog -o mux_tb mux.v mux_tb.v
-  vvp mux_tb
-  gtkwave dump.vcd
+  yosys> read_verilog good_mux.v
+  yosys> synth -top good_mux
+  yosys> write_verilog good_mux_netlist.v
+  iverilog -o mux_tb good_mux.v good_mux_tb.v
+  gtkwave good_mux.vcd
